@@ -7,5 +7,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: aqua;
+    padding: 0 24px;
+}
+
+header, footer {
+    display: none;
+}
+
+section {
+    width: 100%;
 }
