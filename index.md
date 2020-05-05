@@ -1,7 +1,3 @@
----
-layout: default
-title: Home
----
 # Open Business Application Platform
 
 TODO3
