@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding: 0 24px;
+    padding: 24px;
 }
 
 header, footer {
     display: none;
 }
 
-section {
+section, .wrapper {
     width: 100%;
 }
