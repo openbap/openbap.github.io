@@ -2192,7 +2192,7 @@ let t,e,h,a,c,i,o,s,n,l,d,r,p,v,g,z,m,b,u,H,M,V,L,y,f,x,w,C,_,S,k,E,I,P,F,$,N,T,
                 background: var(--obap-selection-color);
                 color: var(--obap-on-selection-color);
             }
-        `))]}static get properties(){return{selectedPage:{type:Number}}}constructor(){super(),sh.create("green","#4caf50","#087f23","#80e27e","#ffc107","#FAFAFA"),this.theme="default",this.selectedPage=10}render(){return Oe(ae||(ae=ce`
+        `))]}static get properties(){return{selectedPage:{type:Number}}}constructor(){super(),sh.create("green","#4caf50","#087f23","#80e27e","#ffc107","#FAFAFA"),this.theme="default",this.selectedPage=0}render(){return Oe(ae||(ae=ce`
             <div class="container typography-body">
                 <obap-material class="navigator">
                     <obap-selector selected-index="${0}" @obap-item-selected="${0}">
