@@ -782,7 +782,19 @@ let t,e,a,i,o,r,s,l,n,c,h,d,p,v,b,g,u,m,z,y,f,x,H,V,w,M,L,_,k,C,S,E,$,I,F,N,T,P,
                 flex: 1;
                 display: flex;
                 flex-direction: row;
-                overflow: hidden;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                scrollbar-width: none;
+            }
+
+            :host([vertical]) * > .content-container {
+                overflow-y: scroll;
+                overflow-x: hidden;
+            }
+
+            .content-container::-webkit-scrollbar {
+                width: 0;
+                height: 0;
             }
 
             obap-button {
@@ -6979,13 +6991,12 @@ let t,e,a,i,o,r,s,l,n,c,h,d,p,v,b,g,u,m,z,y,f,x,H,V,w,M,L,_,k,C,S,E,$,I,F,N,T,P,
             }
 
             obap-data-list {
-                /*
-                height: 219px;
-                width: 620px;
-                */
-          
+                
+                height: 213px;
+                width: 670px;
+
             }
-        `))]}static get properties(){return{columns:{type:Array,attribute:"columns"},rows:{type:Array,attribute:"rows"}}}constructor(){super(),this.columns=[{label:"Dessert (100g serving)",field:"dessert",type:"text",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Price",field:"price",type:"number",suffix:"",prefix:"$",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Calories",field:"calories",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Fat (g)",field:"fat",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Carbs (g)",field:"carbs",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Protein (g)",field:"protein",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Sodium (mg)",field:"sodium",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Calcium (%)",field:"calcium",type:"number",suffix:"%",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Iron (%)",field:"iron",type:"number",suffix:"%",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"In Stock",field:"available",type:"boolean",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Add to Cart",field:"",type:"action",suffix:"",prefix:"",actionLabel:"Add",trueIcon:"",falseIcon:"",sortable:!1}],this.rows=[{id:0,dessert:"Frozen yoghurt",price:"4.50",calories:"159",fat:"6.0",carbs:"24",protein:"4.0",sodium:"87",calcium:"14",iron:"1",available:!0},{id:1,dessert:"Ice cream sandwich",price:"3.99",calories:"237",fat:"9.0",carbs:"37",protein:"4.3",sodium:"129",calcium:"8",iron:"1",available:!0},{id:2,dessert:"Eclair",price:"2.99",calories:"262",fat:"16.0",carbs:"24",protein:"6.0",sodium:"337",calcium:"6",iron:"7",available:!1},{id:3,dessert:"Cupcake",price:"2.50",calories:"305",fat:"3.7",carbs:"67",protein:"4.3",sodium:"413",calcium:"3",iron:"8",available:!0},{id:4,dessert:"Gingerbread",price:"1.75",calories:"356",fat:"16.0",carbs:"49",protein:"3.9",sodium:"327",calcium:"7",iron:"16",available:!0},{id:5,dessert:"Jelly bean",price:"0.35",calories:"375",fat:"0.0",carbs:"94",protein:"0.0",sodium:"50",calcium:"0",iron:"0",available:!0},{id:6,dessert:"Lollipop",price:"0.50",calories:"392",fat:"0.2",carbs:"98",protein:"0.0",sodium:"38",calcium:"0",iron:"2",available:!1},{id:7,dessert:"Honeycomb",price:"1.45",calories:"408",fat:"3.2",carbs:"87",protein:"6.5",sodium:"562",calcium:"0",iron:"45",available:!1},{id:8,dessert:"Donut",price:"0.99",calories:"452",fat:"25.0",carbs:"51",protein:"4.9",sodium:"326",calcium:"2",iron:"22",available:!0},{id:9,dessert:"KitKat",price:"0.99",calories:"518",fat:"26.0",carbs:"65",protein:"7.0",sodium:"54",calcium:"12",iron:"6",available:!0}]}render(){return os(ur||(ur=yr`
+        `))]}static get properties(){return{columns:{type:Array,attribute:"columns"},rows:{type:Array,attribute:"rows"}}}constructor(){super(),this.columns=[{label:"Dessert (100g serving)",field:"dessert",type:"text",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Price",field:"price",type:"number",suffix:"",prefix:"$",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Calories",field:"calories",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Fat (g)",field:"fat",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Carbs (g)",field:"carbs",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Protein (g)",field:"protein",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Sodium (mg)",field:"sodium",type:"number",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Calcium (%)",field:"calcium",type:"number",suffix:"%",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Iron (%)",field:"iron",type:"number",suffix:"%",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"In Stock",field:"available",type:"boolean",suffix:"",prefix:"",actionLabel:"",trueIcon:"",falseIcon:"",sortable:!0},{label:"Add to Cart",field:"",type:"action",suffix:"",prefix:"",actionLabel:"Add",trueIcon:"",falseIcon:"",sortable:!1}],this.rows=[{id:0,dessert:"Frozen Yoghurt",price:4.5,calories:159,fat:6,carbs:24,protein:4,sodium:87,calcium:14,iron:1,available:!0},{id:1,dessert:"Ice Cream Sandwich",price:3.99,calories:237,fat:9,carbs:37,protein:4.3,sodium:129,calcium:8,iron:1,available:!0},{id:2,dessert:"Eclair",price:2.99,calories:262,fat:16,carbs:24,protein:6,sodium:337,calcium:6,iron:7,available:!1},{id:3,dessert:"Cupcake",price:2.5,calories:305,fat:3.7,carbs:67,protein:4.3,sodium:413,calcium:3,iron:8,available:!0},{id:4,dessert:"Gingerbread",price:1.75,calories:356,fat:16,carbs:49,protein:3.9,sodium:327,calcium:7,iron:16,available:!0},{id:5,dessert:"Jelly Bean",price:.35,calories:375,fat:0,carbs:94,protein:0,sodium:50,calcium:0,iron:0,available:!0},{id:6,dessert:"Lollipop",price:.5,calories:392,fat:.2,carbs:98,protein:0,sodium:38,calcium:0,iron:2,available:!1},{id:7,dessert:"Honeycomb",price:1.45,calories:408,fat:3.2,carbs:87,protein:6.5,sodium:562,calcium:0,iron:45,available:!1},{id:8,dessert:"Donut",price:.99,calories:452,fat:25,carbs:51,protein:4.9,sodium:326,calcium:2,iron:22,available:!0},{id:9,dessert:"KitKat",price:.99,calories:518,fat:26,carbs:65,protein:7,sodium:54,calcium:12,iron:6,available:!0}]}render(){return os(ur||(ur=yr`
             <div class="container">
                 <div class="title">Default</div>
                 <div class="row">
