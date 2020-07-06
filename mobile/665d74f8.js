@@ -469,7 +469,6 @@ let t,e,o,i,s,n,a,r,l,c,h,p,d,u,b,g,v,m,_,y,w,f,x,S,E,C,P,V,k,N,z,I,R,M,L,H,A,T,
             :host {
                 display: block;
                 box-sizing: border-box;
-                height: 100%;
                 background: var(--obap-window-color, #FAFAFA);
             }
     
@@ -496,7 +495,6 @@ let t,e,o,i,s,n,a,r,l,c,h,p,d,u,b,g,v,m,_,y,w,f,x,S,E,C,P,V,k,N,z,I,R,M,L,H,A,T,
                 display: flex;
                 flex-direction: column;
                 height: 100%;
-                
             }
 
             .app-pages {
@@ -512,8 +510,9 @@ let t,e,o,i,s,n,a,r,l,c,h,p,d,u,b,g,v,m,_,y,w,f,x,S,E,C,P,V,k,N,z,I,R,M,L,H,A,T,
             }
 
             .view-pages {
-                height: calc(100% - 16px);
-                margin: 8px 8px 8px 8px;
+                height: 100%;
+                overflow: hidden;
+                padding: 8px 8px 8px 8px;
                 box-sizing: border-box;
             }
 
@@ -545,7 +544,7 @@ let t,e,o,i,s,n,a,r,l,c,h,p,d,u,b,g,v,m,_,y,w,f,x,S,E,C,P,V,k,N,z,I,R,M,L,H,A,T,
                 </obap-top-app-bar>
 
                 <div class="app-container">
-                    <obap-pages id="top-pages" class="app-pages" selected-index="${0}">
+                    <obap-pages class="app-pages" selected-index="${0}">
                         <div class="navigator">${0}</div>
                         <obap-pages class="view-pages" selected-index="${0}"><slot></slot></obap-pages>
                     </obap-pages>
