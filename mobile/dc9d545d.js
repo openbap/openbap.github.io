@@ -1606,7 +1606,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,y,m,f,x,w,_,k,S,E,C,I,P,V,A,$,N,z,R,L,H,B,
                 </div>
                 ${0}
             </div>
-        `),this._clickHandler,this._getCheck(),this.noInk?null:oo(Ge||(Ge=yt`<obap-ripple extend="2" ?has-focus="${0}"></obap-ripple>`),this.hasFocus),this.label)}_getCheck(){return this.indeterminate?ao(Je||(Je=yt`<svg class="check" viewBox="0 0 24 24"><g><path d="M19 13H5v-2h14v2z"/></g></svg>`)):this.selected?ao(Ke||(Ke=yt`<svg class="check" viewBox="0 0 24 24"><g><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></g></svg>`)):null}_clickHandler(e){this.selected=!this.selected,this.selected&&(this.indeterminate=!1),this.hasFocus=!1}});class Aa extends(Va(wo)){static get styles(){return[Ro,No,mo(Ye||(Ye=yt`
+        `),this._clickHandler,this._getCheck(),this.noInk?null:oo(Ge||(Ge=yt`<obap-ripple extend="2" ?has-focus="${0}"></obap-ripple>`),this.hasFocus),this.label)}_getCheck(){return this.indeterminate?ao(Je||(Je=yt`<svg class="check" viewBox="0 0 24 24"><g><path d="M19 13H5v-2h14v2z"/></g></svg>`)):this.selected?ao(Ke||(Ke=yt`<svg class="check" viewBox="0 0 24 24"><g><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></g></svg>`)):null}_clickHandler(e){this.selected=!this.selected,this.selected&&(this.indeterminate=!1),this.hasFocus=!1}});class Aa extends(Va(wo)){static get styles(){return[No,mo(Ye||(Ye=yt`
             :host {
                 --obap-data-list-background-color: var(--obap-surface-color, #FFFFFF);
                 --obap-data-list-hover-background-color: #F5F5F5;
@@ -1770,7 +1770,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,y,m,f,x,w,_,k,S,E,C,I,P,V,A,$,N,z,R,L,H,B,
                 padding: 0 0 0 8px;
             }
         `))]}static get properties(){return{falseIcon:{type:String,attribute:"false-icon"},trueIcon:{type:String,attribute:"true-icon"}}}constructor(){super(),this.falseIcon="core:cross",this.trueIcon="core:check"}updated(e){super.updated(e),this._scrollHeaderContainer=this.renderRoot.getElementById("scroll-header-container"),this._fixedBodyContainer=this.renderRoot.getElementById("fixed-body-container"),requestAnimationFrame(()=>this._resizeHeaderCells())}render(){return oo(Xe||(Xe=yt`
-            <obap-data-table-layout @obap-item-selected-change="${0}" @obap-data-table-layout-size-changed="${0}">
+            <obap-data-table-layout class="typography-body" @obap-item-selected-change="${0}" @obap-data-table-layout-size-changed="${0}">
                 <!-- Left Actions -->
                 ${0}
                 
@@ -1865,7 +1865,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,y,m,f,x,w,_,k,S,E,C,I,P,V,A,$,N,z,R,L,H,B,
                             ${0}
                         </div>
                     </td>
-                `),e.type,e.prefix+i+e.suffix)}}_getSortIcon(e,t){return this.sortIndex===t?this.sortDescending?"core:arrow-down":"core:arrow-up":""}_onActionClick(e){this._fireEvent("obap-data-action",{rowIndex:e.target.rowIndex,columnIndex:e.target.columnIndex})}_onColumnClick(e){const t=e.target.columnIndex;t>-1&&(t===this.sortIndex?this.sortDescending=!this.sortDescending:(this.sortIndex=t,this.sortDescending=!1))}_resizeHeaderCells(){const e=this.renderRoot.getElementById("visible-header").querySelectorAll(".header-cell-container"),t=this.renderRoot.getElementById("invisible-header").querySelectorAll(".header-cell-container");for(let o=0;o<t.length;o++)e[o].style.width=t[o].clientWidth+"px"}_rowCheck(e){e.preventDefault();const t=e.target,o=e.detail.selected;if(t.hasAttribute("row-index")){const e=Number(t.getAttribute("row-index"));o?this.selectRow(e):this.deselectRow(e)}else o?this.selectAllRows():this.deselectAllRows();this.requestUpdate()}}window.customElements.define("obap-data-list",Aa);window.customElements.define("demo-tables",class extends wo{static get styles(){return[mo(ht||(ht=yt`
+                `),e.type,e.prefix+i+e.suffix)}}_getSortIcon(e,t){return this.sortIndex===t?this.sortDescending?"core:arrow-down":"core:arrow-up":""}_onActionClick(e){this._fireEvent("obap-data-action",{rowIndex:e.target.rowIndex,columnIndex:e.target.columnIndex})}_onColumnClick(e){const t=e.target.columnIndex;t>-1&&(t===this.sortIndex?this.sortDescending=!this.sortDescending:(this.sortIndex=t,this.sortDescending=!1))}_resizeHeaderCells(){const e=this.renderRoot.getElementById("visible-header").querySelectorAll(".header-cell-container"),t=this.renderRoot.getElementById("invisible-header").querySelectorAll(".header-cell-container");for(let o=0;o<t.length;o++)e[o].style.width=t[o].clientWidth+"px"}_rowCheck(e){e.preventDefault();const t=e.target,o=e.detail.selected;if(t.hasAttribute("row-index")){const e=Number(t.getAttribute("row-index"));o?this.selectRow(e):this.deselectRow(e)}else t.indeterminate?t.selected&&t.indeterminate&&this.selectAllRows():o?this.selectAllRows():this.deselectAllRows();this.requestUpdate()}}window.customElements.define("obap-data-list",Aa);window.customElements.define("demo-tables",class extends wo{static get styles(){return[mo(ht||(ht=yt`
             :host {
                 display: block;
                 height: 100%;
