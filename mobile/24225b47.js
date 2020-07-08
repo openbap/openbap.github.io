@@ -2122,30 +2122,27 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,V,A,P,N,R,L,B,T,
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-            }
-
-            demo-panel {
-                margin-bottom: 8px;
+                margin-bottom: 24px;
             }
 
             obap-check {
                 margin-right: 24px;
             }
 
-            obap-line-sparkline {
-                width: 100%;
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         `))]}static get properties(){return{values:{type:Array},showLine:{type:Boolean},showMarkers:{type:Boolean},showArea:{type:Boolean}}}constructor(){super(),this.showLine=!0,this.showMarkers=!0,this.showArea=!0,this.values=[-7,-9,-5,-2,9,11,15,10,10,17,19,17,10,22,25,10,9,10,26,28,27,10,10,30,10,-3,-6,-3,4,10]}render(){return $a(It||(It=Do`
             <div class="container">
-                <demo-panel>
+                <demo-panel class="center">
                     <div class="check-group" @obap-item-selected-change="${0}">
                         <obap-check name="line" label="Line" selected></obap-check>
                         <obap-check name="marker" label="Marker" selected></obap-check>
                         <obap-check name="area" label="Area" selected></obap-check>
                     </div>
-                </demo-panel>
-
-                <demo-panel>
                     <obap-line-sparkline .values="${0}" ?show-line="${0}" ?show-markers="${0}" ?show-area="${0}"></obap-line-sparkline>
                 </demo-panel>
             </div>
@@ -2224,12 +2221,15 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,V,A,P,N,R,L,B,T,
                 margin-bottom: 8px;
             }
 
-            obap-bar-sparkline {
-                width: 100%;
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         `))]}static get properties(){return{values:{type:Array}}}constructor(){super(),this.values=[-7,-9,-5,-2,9,11,15,10,10,17,19,17,10,22,25,10,9,10,26,28,27,10,10,30,10,-3,-6,-3,4,10]}render(){return $a(Rt||(Rt=Do`
             <div class="container">
-                <demo-panel>
+                <demo-panel class="center">
                     <obap-bar-sparkline .values="${0}"></obap-bar-sparkline>
                 </demo-panel>
             </div>
@@ -2308,12 +2308,15 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,V,A,P,N,R,L,B,T,
                 margin-bottom: 8px;
             }
 
-            obap-winloss-sparkline {
-                width: 100%;
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         `))]}static get properties(){return{values:{type:Array}}}constructor(){super(),this.values=[-7,-9,-5,-2,9,11,15,10,10,17,19,17,10,22,25,10,9,10,26,28,27,10,10,30,10,-3,-6,-3,4,10]}render(){return $a(Ft||(Ft=Do`
             <div class="container">
-                <demo-panel>
+                <demo-panel class="center">
                     <obap-winloss-sparkline .values="${0}"></obap-winloss-sparkline>
                 </demo-panel>
             </div>
@@ -2398,12 +2401,15 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,V,A,P,N,R,L,B,T,
                 margin-bottom: 8px;
             }
 
-            obap-bullet-sparkline {
-                width: 100%;
+            .center {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
             }
         `))]}static get properties(){return{bulletRanges:{type:Array}}}constructor(){super(),this.bulletRanges=[40,70,85,100]}render(){return $a(Wt||(Wt=Do`
             <div class="container">
-                <demo-panel>
+                <demo-panel class="center">
                     <obap-bullet-sparkline class="sparkline" .percentageRanges="${0}" value="60" target-value="50" max-value="100"></obap-bullet-sparkline>
                 </demo-panel>
             </div>
