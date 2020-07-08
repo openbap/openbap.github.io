@@ -3591,18 +3591,16 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
                     <obap-chip label="lemon" icon="app:buttons" toggle show-check></obap-chip>
                 </div>
             </demo-panel>
-        `),this._handleChipRemove)}_handleChipRemove(e){e.target.parentNode.removeChild(e.target)}});const hr=e=>class extends e{static get properties(){return{label:{type:String,attribute:"label"},icon:{type:String,attribute:"icon"},value:{type:String,attribute:"value"},borderStyle:{type:String,attribute:"border-style",reflect:!0},filled:{type:Boolean,attribute:"filled",reflect:!0},floatLabel:{type:Boolean,attribute:"float-label"},opened:{type:Boolean,attribute:"opened"}}}get opened(){return this._opened}set opened(e){const t=this.opened;t!==e&&(this._opened=e,e?this._fireEvent("obap-select-action",{action:"opened"}):this._fireEvent("obap-select-action",{action:"closed"}),this.requestUpdate("opened",t))}constructor(){super(),this.label="",this.icon="",this.value="",this.borderStyle="none",this.filled=!1,this.floatLabel=!1,this._opened=!1}_fireEvent(e,t){const o=new CustomEvent(e,{bubbles:!0,composed:!0,detail:t});return this.dispatchEvent(o)}};class ur extends(hr(oi)){static get styles(){return[hi,gi,Za(Ho||(Ho=Zo`
+        `),this._handleChipRemove)}_handleChipRemove(e){e.target.parentNode.removeChild(e.target)}});const hr=e=>class extends e{static get properties(){return{label:{type:String,attribute:"label"},icon:{type:String,attribute:"icon"},value:{type:String,attribute:"value"},borderStyle:{type:String,attribute:"border-style",reflect:!0},floatLabel:{type:Boolean,attribute:"float-label"},opened:{type:Boolean,attribute:"opened"}}}get opened(){return this._opened}set opened(e){const t=this.opened;t!==e&&(this._opened=e,e?this._fireEvent("obap-select-action",{action:"opened"}):this._fireEvent("obap-select-action",{action:"closed"}),this.requestUpdate("opened",t))}constructor(){super(),this.label="",this.icon="",this.value="",this.borderStyle="none",this.floatLabel=!1,this._opened=!1}_fireEvent(e,t){const o=new CustomEvent(e,{bubbles:!0,composed:!0,detail:t});return this.dispatchEvent(o)}};class ur extends(hr(oi)){static get styles(){return[hi,gi,Za(Ho||(Ho=Zo`
             :host {
                 --obap-select-color: var(--obap-text-primary-color, rgba(0, 0, 0, 0.87));
                 --obap-select-background-color: var(--obap-surface-color, #FFFFFF);
                 --obap-select-border-color: var(--obap-divider-on-surface-color, rgba(0, 0, 0, 0.20));
                 --obap-select-active-border-color: var(--obap-primary-color, #5c6bc0);
-                --obap-select-fill-color: #FAFAFA;
                 --obap-select-border-size: 1px;
                 --obap-select-active-border-size: 1px;
 
                 display: block;
-                
                 color: var(--obap-select-color);
                 background: var(--obap-select-background-color);
                 outline: 0;
@@ -3630,10 +3628,6 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
                 border-bottom: var(--obap-select-border-size) solid var(--obap-select-border-color);
             }
 
-            .selected-container[filled] {
-                background: var(--obap-select-fill-color);
-            }
-
             svg {
                 fill: var(--obap-text-icon-color, rgba(0, 0, 0, 0.38));
             }
@@ -3648,7 +3642,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
 
             .container {
                 position: relative;
-                padding-top: 8px;
+
                 height: 100%;
             }
 
@@ -3720,16 +3714,14 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
                 transform: translate(0, -50%);
                 padding: 0 4px;
                 pointer-events: none;
-                background: none;
-                transition: top 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+                color: var(--obap-text-secondary-color, rgba(0, 0, 0, 0.54));
                 background: var(--obap-select-background-color);
-
+                transition: top 0.15s cubic-bezier(0.4, 0, 0.2, 1);
             }
 
             .floated {
                 top: -2px;
                 width: auto;
-    
                 font-weight: 500;
                 line-height: 11px;
             }
@@ -3739,7 +3731,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
             }
         `))]}constructor(){super(),this.tabIndex=0,this._boundHandleGlobalKeyPressEvent=this._handleGlobalKeyPressEvent.bind(this),this._boundCloseOnEvent=this._closeOnEvent.bind(this)}connectedCallback(){super.connectedCallback(),window.addEventListener("click",this._boundCloseOnEvent),window.addEventListener("keydown",this._boundHandleGlobalKeyPressEvent,!1),this.addEventListener("blur",this._boundCloseOnEvent)}disconnectedCallback(){window.removeEventListener("click",this._boundCloseOnEvent),window.removeEventListener("keydown",this._boundHandleGlobalKeyPressEvent),this.removeEventListener("blur",this._boundCloseOnEvent),super.disconnectedCallback()}render(){return Ma(Oo||(Oo=Zo`
             <div class="container">
-                <div class="selected-container" border-style="${0}" ?filled="${0}" @click="${0}">
+                <div class="selected-container" border-style="${0}" @click="${0}">
                     ${0}
                     <div class="selected-content">${0}</div>
                     <div class="icon">
@@ -3751,7 +3743,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
                 <div id="selection-content" class="selection-content" ?opened="${0}">
                     <slot></slot>
                 </div>
-            </div>`),this.borderStyle,this.filled,this._openContent,this.icon?Ma(Do||(Do=Zo`<obap-icon icon="${0}"></obap-icon>`),this.icon):null,this.value,this.opened,this._renderLabel(),this.opened)}_renderLabel(){let e={"floating-label":!0,floated:this.value,"typography-caption":this.value,"typography-body":!this.value,"float-icon":!this.value&&this.icon};return Ma(Uo||(Uo=Zo`
+            </div>`),this.borderStyle,this._openContent,this.icon?Ma(Do||(Do=Zo`<obap-icon icon="${0}"></obap-icon>`),this.icon):null,this.value,this.opened,this._renderLabel(),this.opened)}_renderLabel(){let e={"floating-label":!0,floated:this.value,"typography-caption":this.value,"typography-body":!this.value,"float-icon":!this.value&&this.icon};return Ma(Uo||(Uo=Zo`
             <div class=${0}>${0}</div>
         `),cr(e),this.label)}_openContent(e){e.preventDefault(),e.stopPropagation(),this.opened=!this.opened,this.opened&&requestAnimationFrame(()=>this.renderRoot.getElementById("selection-content").focus())}_closeOnEvent(e){this.opened&&(this.opened=!1)}_handleGlobalKeyPressEvent(e){switch(e.key){case"Escape":if(this.opened){this.opened=!1,e.stopImmediatePropagation();break}case"ArrowDown":e.composedPath().indexOf(this.getRootNode().host)>-1&&(this.opened?this._fireEvent("obap-select-action",{action:"move-down"}):this.opened=!0,e.stopImmediatePropagation());break;case"ArrowUp":e.composedPath().indexOf(this.getRootNode().host)>-1&&(this.opened&&this._fireEvent("obap-select-action",{action:"move-up"}),e.stopImmediatePropagation());break;case"Enter":e.composedPath().indexOf(this.getRootNode().host)>-1&&(this.opened&&(this._fireEvent("obap-select-action",{action:"select"}),this.opened=!1),e.stopImmediatePropagation());break}}}window.customElements.define("obap-select-container",ur);const gr=e=>class extends(Wi(e)){static get properties(){return{selectedItems:{type:Array,attribute:"selected-items"}}}constructor(){super(),this.selectedItems=[]}updated(e){super.updated(e),e.forEach((e,t)=>{"items"===t&&"multi"===this.selectorType&&this._preselectItems()})}select(e){"multi"===this.selectorType?this._toggleSelected(e):super.select(e)}_changeSelection(e,t){"multi"===this.selectorType?this._toggleSelected(e):super._changeSelection(e,t)}_toggleSelected(e){const t=[...this.selectedItems],o=t.indexOf(e);-1===o?t.push(e):t.splice(o,1),t.sort((e,t)=>e-t),this.selectedItems=t,-1===o?this._selectItem(e):this._deselectItem(e)}_preselectItems(){const e=[];this.items.forEach((t,o)=>{t.hasAttribute(this.selectedAttribute)&&e.push(o)}),this.selectedIndex>-1&&-1===this.selectedItems.indexOf(this.selectedIndex)&&e.push(this.selectedIndex),e.sort((e,t)=>e-t),this.selectedItems=e,this.selectedItems.forEach(e=>this._selectItem(e))}},vr=e=>class extends(gr(e)){static get properties(){return{startIndex:{type:Number,attribute:"start-index"},endIndex:{type:Number,attribute:"end-index"},rangeLength:{type:Number,attribute:"range-length"}}}constructor(){super(),this.startIndex=-1,this.endIndex=-1,this.rangeLength=-1}updated(e){super.updated(e),"range"===this.selectorType&&e.forEach((e,t)=>{"items"!==t&&"startIndex"!==t&&"endIndex"!==t||this._selectRange()})}select(e){switch(this.selectorType){case"range":this._rangeItemSelected(e);break;default:super.select(e)}}_changeSelection(e,t){switch(this.selectorType){case"range":this._rangeItemSelected(e);break;default:super._changeSelection(e,t)}}_rangeItemSelected(e){if(this._ctrl&&this.rangeLength>0){const t=e%this.rangeLength;let o=e-t,a=e+(this.rangeLength-t-1);return o<0&&(o=0),a>this.items.length-1&&(a=this.items.length-1),this.startIndex=o,void(this.endIndex=a)}this.startIndex<0&&this.endIndex<0?this.startIndex=e:this.startIndex>-1&&this.endIndex<0?this.startIndex===e?this.startIndex=-1:this.endIndex=e:(this.startIndex=e,this.endIndex=-1)}_selectRange(){const e=[];if(this.startIndex>-1&&this.endIndex>-1&&this.startIndex!==this.endIndex){const t=Math.min(this.startIndex,this.endIndex),o=Math.max(this.startIndex,this.endIndex);for(let a=t;a<=o;a++)e.push(a)}else this.startIndex>-1&&e.push(this.startIndex);this.selectedItems=e;for(let e=0;e<this.items.length;e++)this.selectedItems.indexOf(e)>-1?this._selectItem(e):this._deselectItem(e)}};class mr extends(vr(oi)){static get styles(){return Za(jo||(jo=Zo`
             :host {
@@ -3810,7 +3802,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
             }
         `))]}static get properties(){return{selectedIndex:{type:Number,attribute:"selected-index"},items:{type:Array}}}constructor(){super(),this.selectedIndex=-1,this.items=[]}connectedCallback(){super.connectedCallback()}disconnectedCallback(){super.disconnectedCallback()}firstUpdated(e){super.firstUpdated(e)}updated(e){super.updated(e),e.forEach((e,t)=>{"selectedIndex"===t&&-1!==this.selectedIndex&&(this.value=this.items[this.selectedIndex],this.requestUpdate())})}render(){return Ma(Go||(Go=Zo`
             <div class="container typography-body">
-                <obap-select-container id="select-container" value="${0}" label="${0}" icon="${0}" border-style="${0}" ?filled="${0}" 
+                <obap-select-container id="select-container" value="${0}" label="${0}" icon="${0}" border-style="${0}" 
                                     ?float-label="${0}" ?opened="${0}" @obap-select-action="${0}">
                     <div>
                         <obap-selector id="selector" selected-index="${0}" selector-type="single" @obap-item-selected="${0}">
@@ -3819,7 +3811,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
                     </div>
                 </obap-select-container>
             </div>
-        `),this.value,this.label,this.icon,this.borderStyle,this.filled,this.floatLabel,this.opened,this._handleAction,this.selectedIndex,this._handleItemClick,this.items.map(e=>Ma(Ko||(Ko=Zo`<div class="item">${0}</div>`),e)))}_handleItemClick(e){e.stopPropagation(),this.renderRoot.getElementById("select-container").opened=!1,this.selectedIndex=e.detail.index}_handleAction(e){const t=e.detail.action,o=this.renderRoot.getElementById("selector");switch(t){case"move-up":o.activatePrevious();break;case"move-down":o.activateNext();break;case"select":this.selectedIndex=o.activeIndex;break;case"closed":o.activeIndex=-1,this.selectedIndex=-1}}}window.customElements.define("obap-select",yr);window.customElements.define("demo-pickers-select",class extends oi{static get styles(){return[Za(Jo||(Jo=Zo`
+        `),this.value,this.label,this.icon,this.borderStyle,this.floatLabel,this.opened,this._handleAction,this.selectedIndex,this._handleItemClick,this.items.map(e=>Ma(Ko||(Ko=Zo`<div class="item">${0}</div>`),e)))}_handleItemClick(e){e.stopPropagation(),this.renderRoot.getElementById("select-container").opened=!1,this.selectedIndex=e.detail.index}_handleAction(e){const t=e.detail.action,o=this.renderRoot.getElementById("selector");switch(t){case"move-up":o.activatePrevious();break;case"move-down":o.activateNext();break;case"select":this.selectedIndex=o.activeIndex;break;case"closed":o.activeIndex=-1,this.selectedIndex=-1}}}window.customElements.define("obap-select",yr);window.customElements.define("demo-pickers-select",class extends oi{static get styles(){return[Za(Jo||(Jo=Zo`
             :host {
                 display: block;
                 height: 100%;
@@ -3860,36 +3852,27 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
             <demo-panel label="Normal">
                 <div class="container">
                     <obap-select border-style="none" selected-index="${0}" .items="${0}"></obap-select>
-                    <obap-select border-style="none" filled selected-index="${0}" .items="${0}"></obap-select>
                     <obap-select border-style="underline" selected-index="${0}" .items="${0}"></obap-select>
-                    <obap-select border-style="underline" filled selected-index="${0}" .items="${0}"></obap-select>
                     <obap-select border-style="outline" selected-index="${0}" .items="${0}"></obap-select>
-                    <obap-select border-style="outline" filled selected-index="${0}" .items="${0}"></obap-select>
                 </div>
             </demo-panel>
 
             <demo-panel label="Label">
                 <div class="container">
                     <obap-select label="select" border-style="none" .items="${0}"></obap-select>
-                    <obap-select label="select" border-style="none" filled .items="${0}"></obap-select>
                     <obap-select label="select" border-style="underline" .items="${0}"></obap-select>
-                    <obap-select label="select" border-style="underline" filled .items="${0}"></obap-select>
                     <obap-select label="select" border-style="outline" .items="${0}"></obap-select>
-                    <obap-select label="select" border-style="outline" filled .items="${0}"></obap-select>
                 </div>
             </demo-panel>
 
             <demo-panel label="Icon">
                 <div class="container">
                     <obap-select icon="app:android" label="select" border-style="none" .items="${0}"></obap-select>
-                    <obap-select icon="app:android" label="select" border-style="none" filled .items="${0}"></obap-select>
                     <obap-select icon="app:android" label="select" border-style="underline" .items="${0}"></obap-select>
-                    <obap-select icon="app:android" label="select" border-style="underline" filled .items="${0}"></obap-select>
                     <obap-select icon="app:android" label="select" border-style="outline" .items="${0}"></obap-select>
-                    <obap-select icon="app:android" label="select" border-style="outline" filled .items="${0}"></obap-select>
                 </div>
             </demo-panel>
-        `),this.selectedIndex,this.items,this.selectedIndex,this.items,this.selectedIndex,this.items,this.selectedIndex,this.items,this.selectedIndex,this.items,this.selectedIndex,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items,this.items)}});class fr extends(ri(oi)){static get styles(){return[Za(Xo||(Xo=Zo`
+        `),this.selectedIndex,this.items,this.selectedIndex,this.items,this.selectedIndex,this.items,this.items,this.items,this.items,this.items,this.items,this.items)}});class fr extends(ri(oi)){static get styles(){return[Za(Xo||(Xo=Zo`
             :host {
                 display: block;
                 overflow: hidden;
