@@ -3846,7 +3846,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,A,P,L,N,V,R,B,T,
        
                 grid-gap: 16px;
                 justify-items: stretch;
-                padding: 0 8px 16px 8px;
+                padding: 8px 8px 16px 8px;
             }
         `))]}static get properties(){return{selectedIndex:{type:Number},items:{type:Array}}}constructor(){super(),this.selectedIndex=0,this.items=["one","two","three","four","five"]}render(){return Ma(Yo||(Yo=Zo`
             <demo-panel label="Normal">
