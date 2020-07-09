@@ -511,7 +511,6 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,L,P,A,R,N,V,B,T,
 
             .navigator {
                 height: 100%;
-                margin-top: 8px;
                 box-sizing: border-box;
                 overflow-y: auto;
             }
@@ -523,10 +522,16 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,L,P,A,R,N,V,B,T,
                 box-sizing: border-box;
             }
 
+            .navigator-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 8px;
+                padding: 8px;
+            }
+
             .navigator-item {
                 display: flex;
                 align-items: center;
-                margin: 0 8px 8px 8px;
                 padding: 8px;
                 cursor: pointer;
             }
@@ -558,7 +563,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,b,h,u,g,v,m,y,f,x,w,_,k,E,S,C,$,I,z,L,P,A,R,N,V,B,T,
                     </obap-pages>
                 </div>
             </div>`),this.getEffectiveDisplayTitle(),this._getToolBarIcon(this.icon),this._navigatorIndex,this._renderNavigator(),this.selectedViewIndex)}_renderNavigator(){return Ja(ae||(ae=ca`
-            <div>
+            <div class="navigator-container">
                 ${0}
             </div>`),this.views.map((e,t)=>Ja(ie||(ie=ca`
                     <obap-material elevation="1" class="navigator-item" index="${0}" @click="${0}">
