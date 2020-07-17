@@ -4749,7 +4749,7 @@ let e,t,o,a,i,r,s,n,l,d,c,p,h,b,u,g,m,v,y,f,x,w,_,k,E,S,$,C,I,V,L,z,P,M,A,T,B,N,
 
                         <obap-check name="custom-stops" label="Custom Stops" @obap-item-selected-change="${0}"></obap-check>
                         <obap-check name="label-format" label="Label Format" @obap-item-selected-change="${0}"></obap-check>
-                        <obap-check name="custom-balloons" label="Custom Balloon" @obap-item-selected-change="${0}"></obap-check>
+                        <obap-check name="custom-balloons" label="Balloons" @obap-item-selected-change="${0}"></obap-check>
                     </div>
                 </demo-panel>
 
